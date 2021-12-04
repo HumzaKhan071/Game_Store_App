@@ -11,14 +11,37 @@ class Search extends StatelessWidget {
       child: Stack(
         children: [
           TextField(
-              cursorColor: kPrimary,
-              decoration: InputDecoration(
-                  fillColor: Color(0xFFF6F8FF),
-                  filled: true,
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                      borderSide:
-                          BorderSide(width: 0, style: BorderStyle.none)))),
+            cursorColor: kPrimary,
+            decoration: InputDecoration(
+                fillColor: Color(0xFFF6F8FF),
+                filled: true,
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(width: 0, style: BorderStyle.none)),
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+                prefixIcon: Icon(
+                  Icons.search_outlined,
+                  color: kPrimary,
+                  size: 30,
+                ),
+                hintText: "Search game",
+                hintStyle: TextStyle(
+                    fontSize: 15, color: Colors.grey.withOpacity(0.7))),
+          ),
+          Positioned(
+
+            bottom: 6,
+            right: 12,
+
+
+            child: Container(
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),color: kPrimary
+              ),
+              child: Icon(Icons.mic_outlined,color: Colors.white,size: 25,),
+            ))
         ],
       ),
     );
