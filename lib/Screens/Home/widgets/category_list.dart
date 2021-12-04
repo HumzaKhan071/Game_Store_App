@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:game_store/Screens/Home/widgets/newest_game.dart';
+import 'package:game_store/Screens/Home/widgets/popular_game.dart';
 
 class CategoryList extends StatelessWidget {
   CategoryList({Key? key}) : super(key: key);
@@ -73,8 +75,28 @@ class CategoryList extends StatelessWidget {
                       width: 33,
                     ),
                 itemCount: List.length),
-          )
+          ),
+          _buildTitle(
+            "Popule game",
+          ),
+          PopularGame(),
+          _buildTitle("Newest game"),
+          NewestGame(),
         ],
+      ),
+    );
+  }
+
+  Widget _buildTitle(String text) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 25),
+      width: double.infinity,
+      child: Text(
+        text,
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+        ),
       ),
     );
   }
