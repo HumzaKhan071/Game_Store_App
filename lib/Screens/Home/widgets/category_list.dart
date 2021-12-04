@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class Category extends StatelessWidget {
-  Category({Key? key}) : super(key: key);
+class CategoryList extends StatelessWidget {
+  CategoryList({Key? key}) : super(key: key);
   final List = [
     {
       "icon": Icons.track_changes_outlined,

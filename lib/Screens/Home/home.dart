@@ -1,11 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:game_store/Screens/Home/widgets/category.dart';
+import 'package:game_store/Screens/Home/widgets/category_list.dart';
+
 import 'package:game_store/Screens/Home/widgets/header.dart';
 import 'package:game_store/Screens/Home/widgets/search.dart';
 import 'package:game_store/constants/colors.dart';
-
-
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,7 +18,7 @@ class HomePage extends StatelessWidget {
           children: [
             Transform(
               transform: Matrix4.identity()..rotateZ(20),
-              origin:  Offset(150, 50),
+              origin: Offset(150, 50),
               child: Image.asset(
                 "assets/images/bg_liquid.png",
                 width: 200,
@@ -38,12 +37,12 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Column(
-              children:  [
-                Header(),
-                Search(),
-              Category(),
+              children: [
+                const Header(),
+                const Search(),
+                CategoryList(),
               ],
-            )
+            ),
           ],
         ),
       ),
