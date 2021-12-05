@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:game_store/Models/game.dart';
+import 'package:game_store/constants/colors.dart';
+import 'package:readmore/readmore.dart';
 
 class GameDesc extends StatelessWidget {
   final Game game;
@@ -7,6 +9,22 @@ class GameDesc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      width: double.maxFinite,
+      padding: EdgeInsets.symmetric(horizontal: 25,),
+      child: ReadMoreText(
+        game.desc,
+        trimLines: 2,
+        colorClickableText: kPrimary,
+        trimMode: TrimMode.Line,
+        style: TextStyle(
+          color: Colors.grey.withOpacity(0.7),
+          height: 1.5
+        ),
+        trimCollapsedText: "More",
+        trimExpandedText: "Less",
+
+      ),
+    );
   }
 }

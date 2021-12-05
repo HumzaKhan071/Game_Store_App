@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:game_store/Models/game.dart';
 import 'package:game_store/Screens/Detail/widgets/game_desc.dart';
 import 'package:game_store/Screens/Detail/widgets/game_gallery.dart';
+import 'package:game_store/Screens/Detail/widgets/game_review.dart';
 
 import 'game_header.dart';
 
@@ -18,6 +19,7 @@ class Gameinfo extends StatelessWidget {
           GameHeader(game:game),
           GameGallery(game: game,),
           GameDesc(game: game),
+          GameReview(game: game),
         ],
       ),
     );
