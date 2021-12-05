@@ -27,11 +27,11 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
           child: Container(
             margin: EdgeInsets.only(
                 top: MediaQuery.of(context).padding.top, left: 25, right: 25),
+            padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.grey.withOpacity(0.5),
               shape: BoxShape.circle,
             ),
-            padding: EdgeInsets.all(10),
             child: Icon(
               Icons.arrow_back_ios_outlined,
               color: Colors.white,
